@@ -1,0 +1,81 @@
+
+"基本设置
+syntax enable       "开启语法高亮
+set nu             	"显示行号
+set showmatch      	"显示匹配的括号
+set cindent        	"C/C++风格缩进
+
+"编码设置
+set fileencodings=utf-8,gb2312,gbk,gb18030  
+set termencoding=utf-8  
+
+" tab转化为4个字符
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""  
+" vundle begin  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible			              " 设置Vim为不兼容VI模式
+filetype off                              " 先关闭文件类型
+set rtp+=~/.vim/bundle/vundle             " 将vundle路径添加到插件vim路径
+call vundle#rc()                          " 执行Vundle初始化
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+ 
+" My Bundles here:
+"
+" original repos on github
+" github上的用户写的插件，使用这种用户名+repo名称的方
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+" vimscripts的repo使用下面的格式，直接是插件名称
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" non github repos
+" 非github的插件，可以直接使用其git地
+" Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'SuperTab'
+Bundle 'altercation/vim-colors-solarized'  
+
+
+
+filetype plugin indent on     " required!  安装完后打开文件类型
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" vundle主要就是上面这个四个命令，例如BundleInstall是全部重新安装，BundleInstall!则是更新
+" 一般安装插件的流程为，先BundleSearch一个插件，然后在列表中选中，按i安装
+" 安装完之后，在vimrc中，添加Bundle 'XXX'，使得bundle能够加载，这个插件，同时如果
+" 需要配置这个插件，也是在vimrc中设置即可
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""  
+" vundle end  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
+
+
+
+" solarized theme  
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized  
+set background=dark  
